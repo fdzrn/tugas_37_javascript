@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tugas 37 | DOM JS</title>
+</head>
+<body>
+	<button type="button" name="button"  onclick="tombol()">Jalankan</button>
+	<br>
+	<br>
+	<br>
+	Atribut <b>getNamedItem()</b> :
+	<p id="satu">contoh</p>
+	<hr>
+	Atribut <b>name()</b> :
+	<p id="dua">contoh</p>
+	<hr>
+	Atribut <b>length()</b> :
+	<p id="tiga">contoh</p>
+	<hr>
+	<script>
+	function tombol() {
+		let satu = document.getElementsByTagName('button')[0];
+		let a = satu.attributes.getNamedItem('onclick').value;
+		document.getElementById('satu').innerHTML = a;
+		let dua = document.getElementsByTagName('button')[0];
+		let b = dua.attributes[0].name;
+		document.getElementById('dua').innerHTML = b;
+		let tiga = document.getElementsByTagName('button')[0];
+		let c = tiga.attributes.length;
+		document.getElementById('tiga').innerHTML = c;
+	}
+	</script>
+</body>
+</html>
